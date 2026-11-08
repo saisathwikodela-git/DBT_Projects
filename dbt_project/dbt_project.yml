@@ -42,7 +42,9 @@ models:
       +materialized: view
       +schema: gold
 
-
-      
+seeds:
+  dbt_project:
+    +schema: bronze
+    +quote_columns: true
       
 
