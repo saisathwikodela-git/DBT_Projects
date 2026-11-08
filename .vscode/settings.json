@@ -1,0 +1,5 @@
+{
+    "dbt.perspectiveTheme": "Pro Dark",
+    "dbt.queryLimit": 10,
+    "python.terminal.useEnvFile": true
+}

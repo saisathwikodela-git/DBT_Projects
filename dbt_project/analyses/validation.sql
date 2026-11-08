@@ -1,0 +1,1 @@
+select {{dbt_project.multiplymacro(10,20)}} as result

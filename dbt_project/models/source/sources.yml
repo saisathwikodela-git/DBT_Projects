@@ -1,3 +1,5 @@
+version: 2
+
 sources:
   - name: source
     database: dbt_dev  
@@ -10,5 +12,6 @@ sources:
       - name: dim_date
 
       - name: dim_store
+      - name: items
 
 # we can also write a  json list here of source

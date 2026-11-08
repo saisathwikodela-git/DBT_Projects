@@ -1,1 +1,1 @@
-select * from {{ref('data')}}
+select * from {{ref('bronze_customers')}} --- IGNORE ---
