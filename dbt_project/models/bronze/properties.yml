@@ -1,12 +1,30 @@
 version: 2
 
 models:
-  - name: bronze_date #  Must match the filename of a model -- including case sensitivity.
-    config:
-      tags: ['bronze_test']
-      materialized: view
-    columns:
-      - name: customer_id
+   - name: bronze_customers
+     config:
+      materialized: table
+     columns:
+      - name: customer_sk
+        data_tests:
+          - unique
+          - not_null 
+
+   - name: bronze_sales
+     config:
+      materialized: table
+     columns:
+      - name: sales_id
         data_tests:
           - unique
           - not_null
+          - accepted_values:
+              arguments:
+                values: ['1', '2', '3']
+              config:
+                severity: warn
+      - name: gross_amount
+        data_tests:
+          - non_negative
+       
+              
